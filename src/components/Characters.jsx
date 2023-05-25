@@ -21,12 +21,12 @@ export function Characters() {
     }
 
     return (
-        <div className="" style={styleContainer}>
+        <div style={styleContainer}>
             {
                 characters.map((character)=>{
 
                     return (
-                        <div className="" key={character.id}>
+                        <div className="card-container" key={character.id}>
                             <div className="card mb-1" style={styleCard}>
                                 <img src={character.image} className="card-img-top" alt="..."/>
                                 <div className="card-body">

@@ -8,7 +8,7 @@ import { Buttons } from './components/Buttons';
 function App() {
   return (
     <div className="App">
-      <h2 className='alert alert-success text-center'>Rick and Morty</h2>
+      <h2 className='title-app alert alert-success text-center'>Rick and Morty</h2>
       
       <CharacterProvider>
         <Pagination />

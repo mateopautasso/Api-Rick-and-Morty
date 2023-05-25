@@ -22,6 +22,9 @@ export function CharacterProvider({ children }) {
             setPage(page - 1)
         }
     }
+    const handleSelect = (e) => {
+        setPage(Number(e.target.value))
+    }
 
     useEffect(() => {
         axios.get(`https://rickandmortyapi.com/api/character?page=${page}`).then(res => {
@@ -32,7 +35,7 @@ export function CharacterProvider({ children }) {
     },[page])
 
     return (
-        <CharactersContext.Provider value={{characters, page, totalPages, nextPage, prevPage, results}}>
+        <CharactersContext.Provider value={{characters, page, totalPages, nextPage, prevPage, results, handleSelect}}>
             {children}
         </CharactersContext.Provider>
     )
